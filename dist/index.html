@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!-- <title>形象網站-登陸頁 工作室形象網站</title> -->
+	<title>形象網站-登錄頁 統一入口</title>
+	<style>
+		* {
+			/*頁面所有元素*/
+			font-family: microsoft jhengHei;
+			/*字型*/
+		}
+
+		.logoIcon {
+			/*class代號為logoIcon的標籤*/
+			font-variant: normal;
+			/*字元加粗*/
+			/* width: 100px;寬度 */
+			/* height: 100px;高度 */
+			width: 350px;
+			/* 寬度 */
+			height: 350px;
+			/* 高度 */
+			border-radius: 100%;
+			/*圓角*/
+			text-align: center;
+			/*內容水平置中*/
+			display: block;
+			/*區塊顯示*/
+			margin: 80px auto;
+			/*外距*/
+			margin-bottom: 20px;
+			/*下外距*/
+			line-height: 80px;
+			/*行高*/
+			position: relative;
+			/*相對位置方式置入*/
+			z-index: 99;
+			/*元素順序安排在99層*/
+		}
+
+		.skew1 {
+			/*class代號為skew1的標籤*/
+			transform: skewY(15deg) translate(0px, -150px);
+			/*傾斜變形與位移*/
+			height: 55vh;
+			/*400/1080*/
+			/*高度*/
+			position: relative;
+			/*相對位置方式置入*/
+			z-index: -1;
+			/*元素順序安排在最下層*/
+		}
+
+		.skew2 {
+			/*class代號為skew2的標籤*/
+			transform: skewY(-15deg) translate(0px, -150px);
+			/*傾斜變形與位移*/
+			height: 55vh;
+			/*400/1080*/
+			/*高度*/
+			position: relative;
+			/*相對位置方式置入*/
+			z-index: -1;
+			/*元素順序安排在最下層*/
+		}
+
+		.skew3 {
+			/*class代號為skew3的標籤*/
+			transform: skewY(15deg) translate(0px, -175px);
+			/*傾斜變形與位移*/
+			height: 30px;
+			/*高度*/
+		}
+
+		.skew4 {
+			/*class代號為skew4的標籤*/
+			transform: skewY(-15deg) translate(0px, -175px);
+			/*傾斜變形與位移*/
+			height: 30px;
+			/*高度*/
+		}
+
+		.skew5 {
+			/*class代號為skew5的標籤*/
+			transform: skewY(15deg) translate(0px, -230px);
+			/*傾斜變形與位移*/
+			height: 30px;
+			/*高度*/
+			border: 1px rgba(200, 200, 200, 0.15) solid;
+			/*邊框*/
+		}
+
+		.skew6 {
+			/*class代號為skew6的標籤*/
+			transform: skewY(-15deg) translate(0px, -230px);
+			/*傾斜變形與位移*/
+			height: 30px;
+			/*高度*/
+			border: 1px rgba(200, 200, 200, 0.15) solid;
+			/*邊框*/
+		}
+
+		.skew7 {
+			/*class代號為skew7的標籤*/
+			transform: skewY(15deg) translate(0px, 150px);
+			/*傾斜變形與位移*/
+			height: 30px;
+			/*高度*/
+		}
+
+		.skew8 {
+			/*class代號為skew8的標籤*/
+			transform: skewY(-15deg) translate(0px, 150px);
+			/*傾斜變形與位移*/
+			height: 30px;
+			/*高度*/
+		}
+
+		.skew9 {
+			/*class代號為skew9的標籤*/
+			transform: skewY(15deg) translate(0px, 150px);
+			/*傾斜變形與位移*/
+			height: 55vh;
+			/*300/1080*/
+			/*高度*/
+			position: relative;
+			/*相對位置方式置入*/
+			z-index: -1;
+			/*元素順序安排在最下層*/
+		}
+
+		.skew10 {
+			/*class代號為skew10的標籤*/
+			transform: skewY(-15deg) translate(0px, 150px);
+			/*傾斜變形與位移*/
+			height: 55vh;
+			/*300/1080*/
+			position: relative;
+			/*相對位置方式置入*/
+			z-index: -1;
+			/*元素順序安排在最下層*/
+		}
+
+		.msgBox {
+			/*class代號為msgBox的標籤*/
+			resize: none;
+			/*取消調整尺寸功能*/
+			height: 25vh;
+			/*高度*/
+		}
+
+		.btnup {
+			/*class代號為msgBox的標籤*/
+			position: relative;
+			/*相對位置方式置入*/
+			z-index: 55;
+			/*元素順序安排在55層*/
+		}
+
+		[class*="col-sm-4"] {
+			/*標籤有套用class且有包含col- */
+			padding: 0px;
+			/*清除內距*/
+		}
+
+		.txtFormat {
+			/*class代號為txtFormat的標籤*/
+			letter-spacing: 2px;
+			/*字距*/
+			line-height: 36px;
+			/*行距*/
+			padding-top: 3%;
+			/*上內距*/
+			box-sizing: border-box;
+			/*避免因為增加內距而造成區塊寬高度被撐開影響版面*/
+		}
+
+		.infoArea {
+			/*class代號為infoArea的標籤*/
+			overflow: hidden;
+			/*溢位隱藏*/
+			margin-bottom: 5%;
+			/*下外距*/
+		}
+
+		.infoArea .infoPic {
+			/*class代號為txtFormat的標籤*/
+			transition: all 0.8s;
+			/*0.8秒進行轉變*/
+			opacity: 0.75;
+			/*不透明度*/
+			filter: brightness(0.8);
+			/*亮度濾鏡*/
+			height: 100%;
+			/*高度*/
+			width: 100%;
+			/*寬度*/
+		}
+
+		.infoArea .infoPic:hover {
+			/*class代號為infoArea的標籤底下代號為infoPic的標籤*/
+			cursor: pointer;
+			/*游標形狀*/
+			opacity: 1;
+			/*不透明度*/
+			filter: brightness(1);
+			/*亮度濾鏡*/
+			transform: scale(1.5, 1.5);
+			/*變形縮放*/
+		}
+
+		#navi {
+			text-align: center;
+		}
+	</style>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function () {
+
+			var ww = $(window).width()
+			// alert(ww)
+			$("#btn1,#btn2,#btn3").click(function () {
+				var btnNumber = event.target.id
+				switch (btnNumber) {
+					case "btn1":
+						$('#service1').show()
+						$("#service2,#service3").hide()
+						break;
+					case "btn2":
+						$('#service2').show()
+						$("#service1,#service3").hide()
+						break;
+					case "btn3":
+						$('#service3').show()
+						$("#service1,#service2").hide()
+						break;
+				}
+			})
+			if (ww <= 768) {
+				$("#service2,#service3").hide()
+				$("#navi").show()
+			} else {
+				$("#service2,#service3").show()
+				$("#navi").hide()
+			}
+
+		})
+	</script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row bg-primary">
+			<!-- 第一個區塊背景 -->
+			<div class="col text-center py-3">
+				<!--內容水平置中-->
+				<!-- <p class="logoIcon bg-success pt-3"><i class="fas fa-book fa-4x text-white"></i></p>工作室商標造型與圖示 -->
+				<img class="logoIcon bg-success pt-0" src="https://1.bp.blogspot.com/-cCBdgK3P49I/X7sY8n19ImI/AAAAAAABVmY/V0s-HLdszdglolE8-svS0FP3Ru1n_otSQCLcBGAsYHQ/s0/joey.jpg
+				 " alt="余祥文">
+				<h1 class="text-white mt-5">joey</h1>
+				<!--工作室代號-->
+				<!-- <h3 class="text-white">數位工坊</h3>工作室名稱 -->
+				<h3 class="text-white">余祥文</h3>
+				<!-- <p class="text-white">數位內容解決方案</p>副標題- 標語 -->
+				<p class="text-white">自我介紹<br>小螺絲</p>
+				<!-- <button class="w3-button w3-circle w3-green">+</button> -->
+				<!-- <a href="https://examination1216.000webhostapp.com/prj_list_html/index.html" class="w3-button w3-circle w3-green">+</a> -->
+				<button class="w3-button w3-circle w3-yellow"
+					onclick="window.open('https://examination1216.000webhostapp.com/prj_list_html/index.html')">+</button>
+				<button class="w3-button w3-circle w3-red"
+					onclick="window.open('https://awesome-table.com/-MIIyn0wMYAo-AqwztJ4/view')">+</button>
+				<button class="w3-button w3-circle w3-green"
+					onclick="window.open('https://app.awesome-table.com/-MTdcjEBlxi1a5OFD0p8/view')">+</button>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<!--第一組三角形-->
+			<div class="col bg-primary py-5 skew1"></div>
+			<!--左傾斜區塊-->
+			<div class="col bg-primary py-5 skew2"></div>
+			<!--右傾斜區塊-->
+		</div>
+		<div class="row">
+			<!--第二組三角形-->
+			<div class="col border border-bottom border-light bg-light skew3"></div>
+			<!--左傾斜區塊負責邊框-->
+			<div class="col border border-bottom  border-light bg-light skew4"></div>
+			<!--右傾斜區塊負責邊框-->
+		</div>
+
+		<div class="row">
+			<!--第三組三角形-->
+			<div class="col skew5"></div>
+			<!--左傾斜區塊-->
+			<div class="col skew6"></div>
+			<!--右傾斜區塊-->
+		</div>
+
+		<div class="row my-1 my-sm-5">
+			<!--文字活動標語-->
+			<div class="col-md-6 offset-md-3 text-center border border-secondary border-left-0 border-right-0 py-3">
+				<h2 class="h3 border border-secondary border-left-0 border-right-0 py-5 m-0 txtFormat">我提供您解決方案<br>專案評估
+					CAD CAE <br> HTML5/CSS3/Javascript <br>
+					Python Crawler GAN Unity Animation<br>Leica atmosphere</h2>
+			</div>
+		</div>
+
+		<div class="row m-0 mt-3" id="service1">
+			<!--服務內容介紹區塊1-->
+			<div class="col-md-6 col-lg-4 offset-lg-2 text-sm-right infoArea"><img src="images/1.jpg" alt=""
+					class="img-fluid infoPic"></div>
+			<div class="col-md-6 col-lg-4">
+				<h2 class="mt-5 px-5">平面設計</h2>
+				<p class="text-justify px-3 txtFormat">美學是個重要的學問，我們對外在的事物存在著主觀的衝擊與印象的深刻。透過傾聽與理解，設計師將為您量身訂做符合您期待的視覺美學。
+				</p>
+			</div>
+		</div>
+
+		<div class="row m-0 mt-3" id="service2">
+			<!--服務內容介紹區塊2-->
+			<div class="col-md-6 col-lg-4 offset-lg-2 text-sm-right">
+				<h2 class="mt-5 px-5">網頁設計</h2>
+				<p class="text-justify px-3 txtFormat">
+					透過適合的載體平台，才能有效傳達訊息獲得更多的利益.視覺與前後端的組合，提供的不是廉價的商品，而是符合現今主流且可以真正幫您獲利的網站。</p>
+			</div>
+			<div class="col-md-6 col-lg-4 infoArea"><img src="images/3.jpg" alt="" class="img-fluid infoPic"></div>
+		</div>
+
+		<div class="row m-0 mt-3" id="service3">
+			<!--服務內容介紹區塊3-->
+			<div class="col-md-6 col-lg-4 offset-lg-2 text-sm-right infoArea"><img src="images/2.jpg" alt=""
+					class="img-fluid infoPic"></div>
+			<div class="col-md-6 col-lg-4">
+				<h2 class="mt-5  px-5">剪輯與特效</h2>
+				<p class="text-justify px-3 txtFormat">
+					訊息的傳達由2D平面轉變成多元空間的組合.不只是文字、影像與聲音，我們將透過特效的組合與剪輯的魅力，創作出一部部令人印象深刻的影音之作。</p>
+			</div>
+		</div>
+		<!-- awesome-table 要 login, 非 G1 publish 常有問題, 000web 比較 ok -->
+		<!-- <iframe referrerpolicy="no-referrer-when-downgrade" height="600px" width="100%" style="border:none;" src="https://view-awesome-table.com/-MIIyn0wMYAo-AqwztJ4/view"></iframe> -->
+
+		<div class="row" id="navi">
+			<div class="col-8 p-0 offset-3">
+				<ul class="pagination list-unstyled pl-5">
+					<li class="page-item">
+						<a href="javascript:();" id="btn1" class="page-link">1</a>
+					</li>
+					<li class="page-item">
+						<a href="javascript:();" id="btn2" class="page-link">2</a>
+					</li>
+					<li class="page-item">
+						<a href="javascript:();" id="btn3" class="page-link">3</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<!--聯絡訊息與服務宗旨 加入我們連結至表單-->
+			<div class="col-md-6 offset-md-3 text-center border border-secondary border-left-0 border-right-0 p-3">
+				<h2 class="h3 text-center">取得更多服務</h2>
+				<p class="text-center h5 txtFormat">除了視覺的專案服務外，我也提供教育訓練、活動企劃、專案輔導等項目.
+					也歡迎大家加入我這個小螺絲。</p>
+				<button class="btn btn-dark text-white btnup">加入我</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<!--第四組三角形-->
+			<div class="col border border-bottom border-light bg-light skew7"></div>
+			<!--左傾斜區塊負責邊框-->
+			<div class="col border border-bottom  border-light bg-light skew8"></div>
+			<!--右傾斜區塊負責邊框-->
+		</div>
+		<div class="row">
+			<!--第五組三角形-->
+			<div class="col bg-primary py-5 skew9"></div>
+			<!--左傾斜區塊-->
+			<div class="col bg-primary py-5 skew10"></div>
+			<!--右傾斜區塊-->
+		</div>
+		<div class="col col-sm-8 offset-sm-2 text-center">
+			
+			<p><a href="https://fb-message-html2gds.netlify.app/">GO Quick Message link is HERE</a></p>
+			
+		</div>	
+		<div class="row bg-primary">
+			<!--頁尾內容區塊-->
+			<div class="col col-sm-8 offset-sm-2 text-center">
+				<h2>問題與討論</h2>
+				<p>除了專案服務外，我也提供線上諮詢服務，歡迎您留下訊息。</p>
+				<!-- <form action="" class="container">
+					<div class="row">
+						<p class="col-sm-6"><input type="text" placeholder="請輸入姓名" class="form-control"></p>
+						<p class="col-sm-6" class="form-control"><input type="text" placeholder="請輸入電子郵件"
+								class="form-control"></p>
+					</div>
+					<div class="row">
+						<p class="col-12"><textarea name="" placeholder="請輸入您的留言訊息，最多200個字" maxlength="200"
+								class="w-100 msgBox"></textarea></p>
+					</div>
+					<div class="row">
+						<p class="col text-center"><input type="submit" value="寫好送出" class="btn btn-success"></p>
+					</div>
+
+				</form> -->
+				<!-- <iframe width=900 height=300 src="http://192.168.1.105/joomla/news/index.php"> -->
+				<iframe width=900 height=300 src="https://examination1216.000webhostapp.com/news/index.php">
+					
+					你的瀏覽器不支援 iframe
+				</iframe>
+
+			</div>
+		</div>
+
+		<div class="row bg-primary py-5">
+			<!--頁尾內容區塊2 社群平台連結 與工作室版權宣告-->
+			<div class="col text-center">
+				<a href=""><i class="fab fa-twitter-square fa-3x text-white mx-3"></i></a>
+				<a href=""><i class="fab fa-google-plus-square fa-3x text-white mx-3"></i></a>
+				<a href=""><i class="fab fa-facebook-square fa-3x text-white mx-3"></i></a>
+				<p class="mt-5 h6">&copy;Allrights reserved | Design:DHS.Tristan Mai 2019</p>
+				<p class="mt-5 h6">&copy;Allrights reserved | Modify:joey 22-0404</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
